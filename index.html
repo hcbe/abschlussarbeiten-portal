@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abschlussarbeiten-Portal | RH Köln</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo-area">
+        <div class="logo-mark" aria-hidden="true">
+          <span class="wave w1"></span>
+          <span class="wave w2"></span>
+          <span class="wave w3"></span>
+          <span class="wave w4"></span>
+        </div>
+        <div>
+          <h1>Abschlussarbeiten-Portal</h1>
+          <p class="subtitle">Rheinische Hochschule Köln</p>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <button id="btn-admin" class="btn btn-outline">Admin</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Filter Section -->
+    <section class="filters-section card">
+      <div class="filters-header">
+        <h2>Themen finden</h2>
+        <button id="btn-reset-filters" class="btn btn-text">Filter zurücksetzen</button>
+      </div>
+
+      <div class="filters-grid">
+        <div class="filter-group">
+          <label for="filter-type">Art der Arbeit</label>
+          <select id="filter-type">
+            <option value="">Alle</option>
+            <option value="Bachelorthesis">Bachelorthesis</option>
+            <option value="Masterthesis">Masterthesis</option>
+            <option value="Projektarbeit">Projektarbeit</option>
+            <option value="Praxissemester">Praxissemester</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-status">Status</label>
+          <select id="filter-status">
+            <option value="">Alle</option>
+            <option value="Verfügbar">Verfügbar</option>
+            <option value="In Bearbeitung">In Bearbeitung</option>
+            <option value="Vergeben">Vergeben</option>
+            <option value="Abgeschlossen">Abgeschlossen</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-studiengang">Studiengang</label>
+          <select id="filter-studiengang">
+            <option value="">Alle</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-unternehmen">Unternehmen</label>
+          <select id="filter-unternehmen">
+            <option value="">Alle</option>
+          </select>
+        </div>
+
+        <div class="filter-group filter-search">
+          <label for="filter-search">Suche (Titel, Keywords, Methodik …)</label>
+          <input type="search" id="filter-search" placeholder="z. B. UX, KI, Nachhaltigkeit …">
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Meta -->
+    <div class="results-meta">
+      <span id="results-count">0 Themen</span>
+    </div>
+
+    <!-- Thesis List -->
+    <section id="thesis-list" class="thesis-list">
+      <!-- Cards werden per JS eingefügt -->
+    </section>
+
+    <div id="empty-state" class="empty-state hidden">
+      <p>Keine Themen gefunden. Bitte Filter anpassen.</p>
+    </div>
+  </main>
+
+  <!-- Detail Modal -->
+  <div id="detail-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content card">
+      <button class="modal-close" aria-label="Schließen">&times;</button>
+      <div id="detail-body"></div>
+    </div>
+  </div>
+
+  <!-- Admin Modal -->
+  <div id="admin-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content card admin-content">
+      <button class="modal-close" aria-label="Schließen">&times;</button>
+      
+      <div id="admin-login">
+        <h2>Admin-Bereich</h2>
+        <p>Nur für Betreuer (Daniel & Kollege).</p>
+        <div class="form-group">
+          <label for="admin-password">Passwort</label>
+          <input type="password" id="admin-password" placeholder="Passwort eingeben">
+        </div>
+        <button id="btn-login" class="btn btn-primary">Anmelden</button>
+        <p class="hint">Standard-Passwort: <code>rh-koeln-2026</code> (bitte später ändern)</p>
+      </div>
+
+      <div id="admin-panel" class="hidden">
+        <h2>Neues Thema eintragen</h2>
+        <form id="thesis-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-titel">Titel *</label>
+              <input type="text" id="f-titel" required>
+            </div>
+            <div class="form-group">
+              <label for="f-art">Art der Arbeit *</label>
+              <select id="f-art" required>
+                <option value="Bachelorthesis">Bachelorthesis</option>
+                <option value="Masterthesis">Masterthesis</option>
+                <option value="Projektarbeit">Projektarbeit</option>
+                <option value="Praxissemester">Praxissemester</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-studiengang">Studiengang *</label>
+              <input type="text" id="f-studiengang" required placeholder="z. B. Mediendesign B.A.">
+            </div>
+            <div class="form-group">
+              <label for="f-status">Status *</label>
+              <select id="f-status" required>
+                <option value="Verfügbar">Verfügbar</option>
+                <option value="In Bearbeitung">In Bearbeitung</option>
+                <option value="Vergeben">Vergeben</option>
+                <option value="Abgeschlossen">Abgeschlossen</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="f-kurzbeschreibung">Kurzbeschreibung / Abstract *</label>
+            <textarea id="f-kurzbeschreibung" rows="3" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="f-beschreibung">Detaillierte Beschreibung</label>
+            <textarea id="f-beschreibung" rows="4"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="f-methodik">Empfohlene Methodik *</label>
+            <textarea id="f-methodik" rows="2" required placeholder="z. B. Qualitative Interviews, Design Thinking, quantitative Umfrage, Literaturanalyse …"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-betreuer">Betreuer:in *</label>
+              <input type="text" id="f-betreuer" required>
+            </div>
+            <div class="form-group">
+              <label for="f-kontakt">Kontakt (E-Mail) *</label>
+              <input type="email" id="f-kontakt" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-unternehmen">Unternehmen (bei Praxis / Projekt)</label>
+              <input type="text" id="f-unternehmen" placeholder="Nur bei Projektarbeit oder Praxissemester">
+            </div>
+            <div class="form-group">
+              <label for="f-ort">Ort / Arbeitsweise</label>
+              <input type="text" id="f-ort" placeholder="Campus / Hybrid / Extern">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-beginn">Beginn / Zeitraum</label>
+              <input type="text" id="f-beginn" placeholder="ab sofort / WS 2026/27">
+            </div>
+            <div class="form-group">
+              <label for="f-umfang">Umfang / Dauer</label>
+              <input type="text" id="f-umfang" placeholder="z. B. 12 Wochen / 12 ECTS">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-voraussetzungen">Voraussetzungen</label>
+              <textarea id="f-voraussetzungen" rows="2"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="f-keywords">Schlagworte (kommagetrennt)</label>
+              <input type="text" id="f-keywords" placeholder="UX, KI, Nachhaltigkeit">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-sprache">Sprache</label>
+              <select id="f-sprache">
+                <option value="Deutsch">Deutsch</option>
+                <option value="Englisch">Englisch</option>
+                <option value="Deutsch/Englisch">Deutsch/Englisch</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-verguetung">Vergütung</label>
+              <input type="text" id="f-verguetung" placeholder="unbezahlt / Aufwandsentschädigung">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="f-bewerbung">Bewerbungsform</label>
+            <input type="text" id="f-bewerbung" placeholder="Motivationsschreiben + CV an …">
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Thema speichern & JSON herunterladen</button>
+            <button type="button" id="btn-export" class="btn btn-outline">Aktuelle Daten als JSON exportieren</button>
+          </div>
+        </form>
+
+        <hr>
+        <p class="hint">
+          Nach dem Speichern wird eine aktualisierte <code>theses.json</code> heruntergeladen.
+          Diese Datei einfach im Repository ersetzen und committen – dann ist das neue Thema live.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Rheinische Hochschule Köln · Abschlussarbeiten-Portal · Nur zur internen Nutzung</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

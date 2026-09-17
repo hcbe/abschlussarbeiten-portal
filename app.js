@@ -3,7 +3,7 @@
 let theses = [];
 let filtered = [];
 
-const ADMIN_PASSWORD = "rh-koeln-2026"; // Bitte später ändern!
+const ADMIN_PASSWORD = "bümsmischdutiga"; // Bitte später ändern!
 
 // ---------- DOM Elements ----------
 const listEl = document.getElementById("thesis-list");

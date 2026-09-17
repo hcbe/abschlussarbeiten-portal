@@ -1,117 +1,160 @@
-[
-  {
-    "id": "1",
-    "titel": "KI-gestützte Personalisierung von Lernpfaden in der Hochschulbildung",
-    "art": "Masterthesis",
-    "studiengang": "Bachelor Maschinenbau",
-    "kurzbeschreibung": "Untersuchung und prototypische Umsetzung eines Systems, das Lerninhalte basierend auf dem individuellen Lernverhalten von Studierenden dynamisch anpasst.",
-    "beschreibung": "Ziel ist die Entwicklung und Evaluation eines KI-basierten Empfehlungssystems für personalisierte Lernpfade. Dabei sollen sowohl regelbasierte als auch Machine-Learning-Ansätze verglichen werden. Die Arbeit erfolgt in Kooperation mit dem E-Learning-Team der RH Köln.",
-    "methodik": "Mixed Methods: quantitative Nutzerstudie + qualitative Interviews + prototypische Implementierung (Python/TensorFlow)",
-    "betreuer": "Prof. Dr. Anna Müller",
-    "kontakt": "anna.mueller@rh-koeln.de",
-    "unternehmen": "",
-    "ort": "Campus Ehrenfeld / Hybrid",
-    "beginn": "ab WS 2026/27",
-    "umfang": "6 Monate / 30 ECTS",
-    "voraussetzungen": "Gute Kenntnisse in Python und Machine Learning, Interesse an Educational Technology",
-    "keywords": ["KI", "Machine Learning", "E-Learning", "Personalisierung"],
-    "sprache": "Deutsch/Englisch",
-    "verguetung": "unbezahlt",
-    "bewerbung": "Motivationsschreiben + Lebenslauf + Notenübersicht an anna.mueller@rh-koeln.de",
-    "status": "Verfügbar",
-    "eintragsdatum": "2026-09-10",
-    "aktualisiert": "2026-09-10"
-  },
-  {
-    "id": "2",
-    "titel": "Nachhaltige Markenkommunikation in der Modebranche – eine empirische Analyse",
-    "art": "Bachelorthesis",
-    "studiengang": "Master Sustainable Engineering",
-    "kurzbeschreibung": "Wie kommunizieren Modeunternehmen Nachhaltigkeit glaubwürdig? Analyse von Kampagnen und Wahrnehmung durch die Zielgruppe Gen Z.",
-    "beschreibung": "Die Arbeit untersucht aktuelle Nachhaltigkeitskampagnen führender Modeunternehmen und misst deren Glaubwürdigkeit bei Studierenden. Ergebnis soll ein Praxisleitfaden für authentische Markenkommunikation sein.",
-    "methodik": "Qualitative Inhaltsanalyse von Kampagnen + quantitative Online-Befragung (n≥150)",
-    "betreuer": "Prof. Marie-Susann Kühr",
-    "kontakt": "marie.kuehr@rh-koeln.de",
-    "unternehmen": "",
-    "ort": "Campus Innenstadt",
-    "beginn": "ab sofort",
-    "umfang": "3 Monate / 12 ECTS",
-    "voraussetzungen": "Grundkenntnisse in Marktforschung und Corporate Design",
-    "keywords": ["Nachhaltigkeit", "Branding", "Mode", "Gen Z", "Kommunikation"],
-    "sprache": "Deutsch",
-    "verguetung": "unbezahlt",
-    "bewerbung": "Kurzes Motivationsschreiben an marie.kuehr@rh-koeln.de",
-    "status": "Verfügbar",
-    "eintragsdatum": "2026-09-05",
-    "aktualisiert": "2026-09-12"
-  },
-  {
-    "id": "3",
-    "titel": "Konzeption und Umsetzung eines UX-Design-Systems für ein FinTech-Startup",
-    "art": "Projektarbeit",
-    "studiengang": "Bachelor Wirt.-Ing. FR Maschinenbau",
-    "kurzbeschreibung": "Aufbau eines skalierbaren Design Systems (Components, Tokens, Guidelines) für eine neue Banking-App.",
-    "beschreibung": "In enger Zusammenarbeit mit dem Produktteam des Startups wird ein vollständiges Design System in Figma erstellt und dokumentiert. Fokus liegt auf Accessibility und Dark Mode.",
-    "methodik": "Design Thinking + Atomic Design + Usability-Tests mit 8–12 Probanden",
-    "betreuer": "Prof. Dr. Vanessa Jakob",
-    "kontakt": "vanessa.jakob@rh-koeln.de",
-    "unternehmen": "FinFlow GmbH (Köln)",
-    "ort": "Hybrid (2 Tage/Woche im Startup)",
-    "beginn": "Oktober 2026",
-    "umfang": "4 Monate",
-    "voraussetzungen": "Sehr gute Figma-Kenntnisse, Portfolio mit UI-Beispielen",
-    "keywords": ["UX", "Design System", "FinTech", "Figma", "Accessibility"],
-    "sprache": "Deutsch",
-    "verguetung": "Aufwandsentschädigung möglich",
-    "bewerbung": "Portfolio + kurzes Anschreiben an vanessa.jakob@rh-koeln.de",
-    "status": "Verfügbar",
-    "eintragsdatum": "2026-09-08",
-    "aktualisiert": "2026-09-08"
-  },
-  {
-    "id": "4",
-    "titel": "Praxissemester: Content-Strategie & Social Media bei einem Kölner Medienhaus",
-    "art": "Praxissemester",
-    "studiengang": "Bachelor Wirt.-Ing. FR Maschinenbau",
-    "kurzbeschreibung": "Mitarbeit in der Redaktion und im Social-Media-Team eines etablierten Medienhauses. Eigenständige Konzeption und Umsetzung von Content-Formaten.",
-    "beschreibung": "Du arbeitest an der Schnittstelle von Redaktion, Design und Social Media. Aufgaben umfassen Themenrecherche, visuelle Aufbereitung, Community-Management und Erfolgsmessung.",
-    "methodik": "Praxisarbeit mit begleitender Dokumentation und Reflexionsbericht",
-    "betreuer": "Daniel Weber",
-    "kontakt": "daniel.weber@rh-koeln.de",
-    "unternehmen": "Kölner Stadt-Anzeiger Medien",
-    "ort": "Köln Innenstadt (Vollzeit vor Ort)",
-    "beginn": "SS 2027",
-    "umfang": "20 Wochen",
-    "voraussetzungen": "Interesse an Journalismus und Social Media, sicherer Umgang mit Adobe CC",
-    "keywords": ["Social Media", "Content", "Journalismus", "Redaktion"],
-    "sprache": "Deutsch",
-    "verguetung": "Vergütung nach Tarif",
-    "bewerbung": "Lebenslauf + Motivationsschreiben + Arbeitsproben an daniel.weber@rh-koeln.de",
-    "status": "Verfügbar",
-    "eintragsdatum": "2026-09-01",
-    "aktualisiert": "2026-09-15"
-  },
-  {
-    "id": "5",
-    "titel": "Entwicklung eines interaktiven Dashboards zur Visualisierung von Gesundheitsdaten",
-    "art": "Bachelorthesis",
-    "studiengang": "Bachelor Wirt.-Ing. FR Elektrotechnik",
-    "kurzbeschreibung": "Konzeption und prototypische Umsetzung eines Dashboards, das Kennzahlen aus der Gesundheitsversorgung verständlich aufbereitet.",
-    "beschreibung": "Die Arbeit verbindet datenanalytische und gestalterische Aspekte. Zielgruppe sind Entscheidungsträger in Kliniken und Krankenkassen.",
-    "methodik": "Anforderungsanalyse + Datenvisualisierung (Tableau/Power BI) + Usability-Evaluation",
-    "betreuer": "Prof. Dr. Stefan Jung",
-    "kontakt": "stefan.jung@rh-koeln.de",
-    "unternehmen": "",
-    "ort": "Campus / Homeoffice",
-    "beginn": "flexibel",
-    "umfang": "3–4 Monate",
-    "voraussetzungen": "Grundkenntnisse in Statistik und Datenvisualisierung",
-    "keywords": ["Dashboard", "Gesundheitsdaten", "Visualisierung", "BI"],
-    "sprache": "Deutsch",
-    "verguetung": "unbezahlt",
-    "bewerbung": "Formlos per E-Mail an stefan.jung@rh-koeln.de",
-    "status": "In Bearbeitung",
-    "eintragsdatum": "2026-08-20",
-    "aktualisiert": "2026-09-10"
-  }
-]
+	
+0	
+id	"1789676488752"
+titel	"Nachhaltiges Energiemanagement im Bereich XY"
+art	"Projektarbeit"
+studiengang	"Bachelor Elektrotechnik"
+kurzbeschreibung	"ABC"
+beschreibung	"ABC"
+methodik	"Systematisches Literaturreview"
+betreuer	"Becker oder Pfennig"
+kontakt	"herbert.becker@rh-koeln.de"
+unternehmen	""
+ort	""
+beginn	"Ab Sofor"
+umfang	"12 Wochen"
+voraussetzungen	""
+keywords	
+0	"Energie"
+1	"Nachhaltigkeit"
+2	"KI"
+sprache	"Deutsch"
+verguetung	"unbezahlt"
+bewerbung	"Mail an Becker oder Pfennig"
+status	"Verfügbar"
+eintragsdatum	"2026-09-17"
+aktualisiert	"2026-09-17"
+1	
+id	"1"
+titel	"KI-gestützte Personalisierung von Lernpfaden in der Hochschulbildung"
+art	"Masterthesis"
+studiengang	"Bachelor Maschinenbau"
+kurzbeschreibung	"Untersuchung und prototypische Umsetzung eines Systems, das Lerninhalte basierend auf dem individuellen Lernverhalten von Studierenden dynamisch anpasst."
+beschreibung	"Ziel ist die Entwicklung und Evaluation eines KI-basierten Empfehlungssystems für personalisierte Lernpfade. Dabei sollen sowohl regelbasierte als auch Machine-Learning-Ansätze verglichen werden. Die Arbeit erfolgt in Kooperation mit dem E-Learning-Team der RH Köln."
+methodik	"Mixed Methods: quantitative Nutzerstudie + qualitative Interviews + prototypische Implementierung (Python/TensorFlow)"
+betreuer	"Prof. Dr. Anna Müller"
+kontakt	"anna.mueller@rh-koeln.de"
+unternehmen	""
+ort	"Campus Ehrenfeld / Hybrid"
+beginn	"ab WS 2026/27"
+umfang	"6 Monate / 30 ECTS"
+voraussetzungen	"Gute Kenntnisse in Python und Machine Learning, Interesse an Educational Technology"
+keywords	
+0	"KI"
+1	"Machine Learning"
+2	"E-Learning"
+3	"Personalisierung"
+sprache	"Deutsch/Englisch"
+verguetung	"unbezahlt"
+bewerbung	"Motivationsschreiben + Lebenslauf + Notenübersicht an anna.mueller@rh-koeln.de"
+status	"Verfügbar"
+eintragsdatum	"2026-09-10"
+aktualisiert	"2026-09-10"
+2	
+id	"2"
+titel	"Nachhaltige Markenkommunikation in der Modebranche – eine empirische Analyse"
+art	"Bachelorthesis"
+studiengang	"Master Sustainable Engineering"
+kurzbeschreibung	"Wie kommunizieren Modeunternehmen Nachhaltigkeit glaubwürdig? Analyse von Kampagnen und Wahrnehmung durch die Zielgruppe Gen Z."
+beschreibung	"Die Arbeit untersucht aktuelle Nachhaltigkeitskampagnen führender Modeunternehmen und misst deren Glaubwürdigkeit bei Studierenden. Ergebnis soll ein Praxisleitfaden für authentische Markenkommunikation sein."
+methodik	"Qualitative Inhaltsanalyse von Kampagnen + quantitative Online-Befragung (n≥150)"
+betreuer	"Prof. Marie-Susann Kühr"
+kontakt	"marie.kuehr@rh-koeln.de"
+unternehmen	""
+ort	"Campus Innenstadt"
+beginn	"ab sofort"
+umfang	"3 Monate / 12 ECTS"
+voraussetzungen	"Grundkenntnisse in Marktforschung und Corporate Design"
+keywords	
+0	"Nachhaltigkeit"
+1	"Branding"
+2	"Mode"
+3	"Gen Z"
+4	"Kommunikation"
+sprache	"Deutsch"
+verguetung	"unbezahlt"
+bewerbung	"Kurzes Motivationsschreiben an marie.kuehr@rh-koeln.de"
+status	"Verfügbar"
+eintragsdatum	"2026-09-05"
+aktualisiert	"2026-09-12"
+3	
+id	"3"
+titel	"Konzeption und Umsetzung eines UX-Design-Systems für ein FinTech-Startup"
+art	"Projektarbeit"
+studiengang	"Bachelor Wirt.-Ing. FR Maschinenbau"
+kurzbeschreibung	"Aufbau eines skalierbaren Design Systems (Components, Tokens, Guidelines) für eine neue Banking-App."
+beschreibung	"In enger Zusammenarbeit mit dem Produktteam des Startups wird ein vollständiges Design System in Figma erstellt und dokumentiert. Fokus liegt auf Accessibility und Dark Mode."
+methodik	"Design Thinking + Atomic Design + Usability-Tests mit 8–12 Probanden"
+betreuer	"Prof. Dr. Vanessa Jakob"
+kontakt	"vanessa.jakob@rh-koeln.de"
+unternehmen	"FinFlow GmbH (Köln)"
+ort	"Hybrid (2 Tage/Woche im Startup)"
+beginn	"Oktober 2026"
+umfang	"4 Monate"
+voraussetzungen	"Sehr gute Figma-Kenntnisse, Portfolio mit UI-Beispielen"
+keywords	
+0	"UX"
+1	"Design System"
+2	"FinTech"
+3	"Figma"
+4	"Accessibility"
+sprache	"Deutsch"
+verguetung	"Aufwandsentschädigung möglich"
+bewerbung	"Portfolio + kurzes Anschreiben an vanessa.jakob@rh-koeln.de"
+status	"Verfügbar"
+eintragsdatum	"2026-09-08"
+aktualisiert	"2026-09-08"
+4	
+id	"4"
+titel	"Praxissemester: Content-Strategie & Social Media bei einem Kölner Medienhaus"
+art	"Praxissemester"
+studiengang	"Bachelor Wirt.-Ing. FR Maschinenbau"
+kurzbeschreibung	"Mitarbeit in der Redaktion und im Social-Media-Team eines etablierten Medienhauses. Eigenständige Konzeption und Umsetzung von Content-Formaten."
+beschreibung	"Du arbeitest an der Schnittstelle von Redaktion, Design und Social Media. Aufgaben umfassen Themenrecherche, visuelle Aufbereitung, Community-Management und Erfolgsmessung."
+methodik	"Praxisarbeit mit begleitender Dokumentation und Reflexionsbericht"
+betreuer	"Daniel Weber"
+kontakt	"daniel.weber@rh-koeln.de"
+unternehmen	"Kölner Stadt-Anzeiger Medien"
+ort	"Köln Innenstadt (Vollzeit vor Ort)"
+beginn	"SS 2027"
+umfang	"20 Wochen"
+voraussetzungen	"Interesse an Journalismus und Social Media, sicherer Umgang mit Adobe CC"
+keywords	
+0	"Social Media"
+1	"Content"
+2	"Journalismus"
+3	"Redaktion"
+sprache	"Deutsch"
+verguetung	"Vergütung nach Tarif"
+bewerbung	"Lebenslauf + Motivationsschreiben + Arbeitsproben an daniel.weber@rh-koeln.de"
+status	"Verfügbar"
+eintragsdatum	"2026-09-01"
+aktualisiert	"2026-09-15"
+5	
+id	"5"
+titel	"Entwicklung eines interaktiven Dashboards zur Visualisierung von Gesundheitsdaten"
+art	"Bachelorthesis"
+studiengang	"Bachelor Wirt.-Ing. FR Elektrotechnik"
+kurzbeschreibung	"Konzeption und prototypische Umsetzung eines Dashboards, das Kennzahlen aus der Gesundheitsversorgung verständlich aufbereitet."
+beschreibung	"Die Arbeit verbindet datenanalytische und gestalterische Aspekte. Zielgruppe sind Entscheidungsträger in Kliniken und Krankenkassen."
+methodik	"Anforderungsanalyse + Datenvisualisierung (Tableau/Power BI) + Usability-Evaluation"
+betreuer	"Prof. Dr. Stefan Jung"
+kontakt	"stefan.jung@rh-koeln.de"
+unternehmen	""
+ort	"Campus / Homeoffice"
+beginn	"flexibel"
+umfang	"3–4 Monate"
+voraussetzungen	"Grundkenntnisse in Statistik und Datenvisualisierung"
+keywords	
+0	"Dashboard"
+1	"Gesundheitsdaten"
+2	"Visualisierung"
+3	"BI"
+sprache	"Deutsch"
+verguetung	"unbezahlt"
+bewerbung	"Formlos per E-Mail an stefan.jung@rh-koeln.de"
+status	"In Bearbeitung"
+eintragsdatum	"2026-08-20"
+aktualisiert	"2026-09-10"
+0
+kurzbeschreibung

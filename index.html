@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abschlussarbeiten-Portal H.Becker & D. Pfennig| RH Köln</title>
+  <title>Abschlussarbeiten-Portal | RH Köln</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +25,7 @@
         </div>
       </div>
       <nav class="header-nav">
+        <button id="btn-info" class="btn btn-outline">Info</button>
         <button id="btn-admin" class="btn btn-outline">Admin</button>
       </nav>
     </div>
@@ -106,6 +107,77 @@
     </div>
   </div>
 
+
+  <!-- Info Lightbox -->
+  <div id="info-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="info-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content card info-content">
+      <button class="modal-close" aria-label="Schließen">&times;</button>
+      <div class="info-body">
+        <h2 id="info-title">Informationen zum Abschlussarbeiten-Portal</h2>
+
+        <section class="info-section">
+          <h3>Willkommen</h3>
+          <p>
+            Hier finden Sie aktuelle Themenangebote für Bachelorthesis, Masterthesis,
+            Projektarbeiten und Praxissemester an der Rheinischen Hochschule Köln.
+            Das Portal wird von den betreuenden Lehrenden gepflegt.
+          </p>
+        </section>
+
+        <section class="info-section">
+          <h3>So bewerben Sie sich</h3>
+          <ol>
+            <li>Thema in der Liste auswählen und Details öffnen</li>
+            <li>Voraussetzungen und empfohlene Methodik prüfen</li>
+            <li>Bewerbungsform laut Themenbeschreibung beachten (meist Motivationsschreiben + Lebenslauf)</li>
+            <li>Direkt an die angegebene Kontakt-E-Mail schreiben</li>
+          </ol>
+        </section>
+
+        <section class="info-section">
+          <h3>Arten der Arbeiten</h3>
+          <ul>
+            <li><strong>Bachelorthesis</strong> – Abschlussarbeit im Bachelorstudium</li>
+            <li><strong>Masterthesis</strong> – Abschlussarbeit im Masterstudium</li>
+            <li><strong>Projektarbeit</strong> – praxisorientiertes Projekt (oft mit Unternehmen)</li>
+            <li><strong>Praxissemester</strong> – Praxisphase in einem Unternehmen</li>
+          </ul>
+        </section>
+
+        <section class="info-section">
+          <h3>Status der Themen</h3>
+          <ul>
+            <li><strong>Verfügbar</strong> – Bewerbung möglich</li>
+            <li><strong>In Bearbeitung</strong> – bereits vergeben / in Bearbeitung</li>
+            <li><strong>Vergeben</strong> – nicht mehr verfügbar</li>
+            <li><strong>Abgeschlossen</strong> – Arbeit beendet</li>
+          </ul>
+        </section>
+
+        <section class="info-section">
+          <h3>Hinweise</h3>
+          <p>
+            Die Themen werden regelmäßig aktualisiert. Bei Fragen wenden Sie sich bitte
+            an die jeweilige Betreuungsperson oder an die Studienberatung der RH Köln.
+          </p>
+          <p>
+            <!-- Hier können Sie weitere allgemeine Hinweise, Fristen, Ansprechpartner etc. eintragen. -->
+          </p>
+        </section>
+
+        <section class="info-section">
+          <h3>Kontakt / Ansprechpartner</h3>
+          <p>
+            Für allgemeine Fragen zum Portal:<br>
+            <!-- Name und E-Mail hier eintragen -->
+            <em>Bitte Kontaktdaten hier ergänzen</em>
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+
   <!-- Admin Modal -->
   <div id="admin-modal" class="modal hidden" role="dialog" aria-modal="true">
     <div class="modal-backdrop"></div>
@@ -115,12 +187,13 @@
       <!-- Login -->
       <div id="admin-login">
         <h2>Admin-Bereich</h2>
-        <p>Nur für Betreuer.</p>
+        <p>Nur für Betreuer (Daniel & Kollege).</p>
         <div class="form-group">
           <label for="admin-password">Passwort</label>
           <input type="password" id="admin-password" placeholder="Passwort eingeben">
         </div>
         <button id="btn-login" class="btn btn-primary">Anmelden</button>
+        <p class="hint">Standard-Passwort: <code>rh-koeln-2026</code> (bitte später in app.js ändern)</p>
       </div>
 
       <!-- Admin Panel -->
@@ -277,7 +350,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© H. Becker und D. Pfennig · Abschlussarbeiten-Portal · Nur zur internen Nutzung</p>
+      <p>© Rheinische Hochschule Köln · Abschlussarbeiten-Portal · Nur zur internen Nutzung</p>
     </div>
   </footer>
 

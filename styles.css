@@ -504,3 +504,144 @@ hr {
     padding: 1.1rem;
   }
 }
+
+/* ===== Admin Tabs & List ===== */
+.admin-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid #E5E9EC;
+  padding-bottom: 0.5rem;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--rh-gray);
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  transition: all var(--transition);
+}
+
+.tab-btn:hover {
+  color: var(--rh-purple);
+  background: var(--rh-purple-light);
+}
+
+.tab-btn.active {
+  color: var(--rh-purple);
+  background: var(--rh-purple-light);
+}
+
+.tab-panel.hidden {
+  display: none !important;
+}
+
+.admin-list-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.admin-list-header h2 {
+  font-size: 1.15rem;
+  color: var(--rh-purple);
+}
+
+.admin-list-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.admin-thesis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.admin-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: var(--rh-light);
+  border-radius: 10px;
+  border-left: 4px solid var(--rh-purple);
+}
+
+.admin-item.status-verfuegbar { border-left-color: var(--rh-green); }
+.admin-item.status-in-bearbeitung { border-left-color: #F4A261; }
+.admin-item.status-vergeben { border-left-color: #E76F51; }
+.admin-item.status-abgeschlossen { border-left-color: #6C757D; }
+
+.admin-item-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.admin-item-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.admin-item-meta {
+  font-size: 0.8rem;
+  color: var(--rh-gray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.admin-item-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.btn-sm {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+.btn-edit {
+  background: var(--rh-purple-light);
+  color: var(--rh-purple-dark);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-edit:hover {
+  background: var(--rh-purple);
+  color: white;
+}
+
+.btn-delete {
+  background: #FFEBEE;
+  color: #C62828;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-delete:hover {
+  background: #C62828;
+  color: white;
+}
+
+@media (max-width: 640px) {
+  .admin-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

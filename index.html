@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abschlussarbeiten-Portal von H. Becker und D. Pfennig | RH Köln</title>
+  <title>Abschlussarbeiten-Portal | RH Köln</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
           <span class="wave w4"></span>
         </div>
         <div>
-          <h1>Abschlussarbeiten-Portal von H. Becker und D. Pfennig </h1>
+          <h1>Abschlussarbeiten-Portal</h1>
           <p class="subtitle">Rheinische Hochschule Köln</p>
         </div>
       </div>
@@ -112,149 +112,173 @@
     <div class="modal-content card admin-content">
       <button class="modal-close" aria-label="Schließen">&times;</button>
       
+      <!-- Login -->
       <div id="admin-login">
         <h2>Admin-Bereich</h2>
-        <p>Nur für Betreuer (H. Becker und D. Pfennig ).</p>
+        <p>Nur für Betreuer (Daniel & Kollege).</p>
         <div class="form-group">
           <label for="admin-password">Passwort</label>
           <input type="password" id="admin-password" placeholder="Passwort eingeben">
         </div>
         <button id="btn-login" class="btn btn-primary">Anmelden</button>
-        <p class="hint">Standard-Passwort: <code></code></p>
+        <p class="hint">Standard-Passwort: <code>rh-koeln-2026</code> (bitte später in app.js ändern)</p>
       </div>
 
+      <!-- Admin Panel -->
       <div id="admin-panel" class="hidden">
-        <h2>Neues Thema eintragen</h2>
-        <form id="thesis-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="f-titel">Titel *</label>
-              <input type="text" id="f-titel" required>
-            </div>
-            <div class="form-group">
-              <label for="f-art">Art der Arbeit *</label>
-              <select id="f-art" required>
-                <option value="Bachelorthesis">Bachelorthesis</option>
-                <option value="Masterthesis">Masterthesis</option>
-                <option value="Projektarbeit">Projektarbeit</option>
-                <option value="Praxissemester">Praxissemester</option>
-              </select>
+        <div class="admin-tabs">
+          <button type="button" class="tab-btn active" data-tab="list">Themen verwalten</button>
+          <button type="button" class="tab-btn" data-tab="form">Neues Thema / Bearbeiten</button>
+        </div>
+
+        <!-- Tab: List -->
+        <div id="tab-list" class="tab-panel">
+          <div class="admin-list-header">
+            <h2>Alle Themen</h2>
+            <div class="admin-list-actions">
+              <button type="button" id="btn-new-thesis" class="btn btn-primary">+ Neues Thema</button>
+              <button type="button" id="btn-export" class="btn btn-outline">JSON exportieren</button>
             </div>
           </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="f-studiengang">Studiengang *</label>
-              <input type="text" id="f-studiengang" required placeholder="z. B. Mediendesign B.A.">
-            </div>
-            <div class="form-group">
-              <label for="f-status">Status *</label>
-              <select id="f-status" required>
-                <option value="Verfügbar">Verfügbar</option>
-                <option value="In Bearbeitung">In Bearbeitung</option>
-                <option value="Vergeben">Vergeben</option>
-                <option value="Abgeschlossen">Abgeschlossen</option>
-              </select>
-            </div>
+          <div id="admin-thesis-list" class="admin-thesis-list">
+            <!-- per JS -->
           </div>
+          <p class="hint" style="margin-top:1rem">
+            Änderungen werden lokal gespeichert. Zum Veröffentlichen auf GitHub Pages: 
+            <strong>JSON exportieren</strong> → Datei <code>theses.json</code> im Repository ersetzen und committen.
+          </p>
+        </div>
 
-          <div class="form-group">
-            <label for="f-kurzbeschreibung">Kurzbeschreibung / Abstract *</label>
-            <textarea id="f-kurzbeschreibung" rows="3" required></textarea>
-          </div>
+        <!-- Tab: Form -->
+        <div id="tab-form" class="tab-panel hidden">
+          <h2 id="form-title">Neues Thema eintragen</h2>
+          <form id="thesis-form">
+            <input type="hidden" id="f-id" value="">
 
-          <div class="form-group">
-            <label for="f-beschreibung">Detaillierte Beschreibung</label>
-            <textarea id="f-beschreibung" rows="4"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="f-methodik">Empfohlene Methodik *</label>
-            <textarea id="f-methodik" rows="2" required placeholder="z. B. Qualitative Interviews, Design Thinking, quantitative Umfrage, Literaturanalyse …"></textarea>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="f-betreuer">Betreuer *</label>
-              <input type="text" id="f-betreuer" required>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-titel">Titel *</label>
+                <input type="text" id="f-titel" required>
+              </div>
+              <div class="form-group">
+                <label for="f-art">Art der Arbeit *</label>
+                <select id="f-art" required>
+                  <option value="Bachelorthesis">Bachelorthesis</option>
+                  <option value="Masterthesis">Masterthesis</option>
+                  <option value="Projektarbeit">Projektarbeit</option>
+                  <option value="Praxissemester">Praxissemester</option>
+                </select>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="f-kontakt">Kontakt (E-Mail) *</label>
-              <input type="email" id="f-kontakt" required>
-            </div>
-          </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="f-unternehmen">Unternehmen (bei Praxis / Projekt)</label>
-              <input type="text" id="f-unternehmen" placeholder="Nur bei Projektarbeit oder Praxissemester">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-studiengang">Studiengang *</label>
+                <input type="text" id="f-studiengang" required placeholder="z. B. Mediendesign B.A.">
+              </div>
+              <div class="form-group">
+                <label for="f-status">Status *</label>
+                <select id="f-status" required>
+                  <option value="Verfügbar">Verfügbar</option>
+                  <option value="In Bearbeitung">In Bearbeitung</option>
+                  <option value="Vergeben">Vergeben</option>
+                  <option value="Abgeschlossen">Abgeschlossen</option>
+                </select>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="f-ort">Ort / Arbeitsweise</label>
-              <input type="text" id="f-ort" placeholder="Campus / Hybrid / Extern">
-            </div>
-          </div>
 
-          <div class="form-row">
             <div class="form-group">
-              <label for="f-beginn">Beginn / Zeitraum</label>
-              <input type="text" id="f-beginn" placeholder="ab sofort / WS 2026/27">
+              <label for="f-kurzbeschreibung">Kurzbeschreibung / Abstract *</label>
+              <textarea id="f-kurzbeschreibung" rows="3" required></textarea>
             </div>
-            <div class="form-group">
-              <label for="f-umfang">Umfang / Dauer</label>
-              <input type="text" id="f-umfang" placeholder="z. B. 12 Wochen / 12 ECTS">
-            </div>
-          </div>
 
-          <div class="form-row">
             <div class="form-group">
-              <label for="f-voraussetzungen">Voraussetzungen</label>
-              <textarea id="f-voraussetzungen" rows="2"></textarea>
+              <label for="f-beschreibung">Detaillierte Beschreibung</label>
+              <textarea id="f-beschreibung" rows="4"></textarea>
             </div>
+
             <div class="form-group">
-              <label for="f-keywords">Schlagworte (kommagetrennt)</label>
-              <input type="text" id="f-keywords" placeholder="UX, KI, Nachhaltigkeit">
+              <label for="f-methodik">Empfohlene Methodik *</label>
+              <textarea id="f-methodik" rows="2" required placeholder="z. B. Qualitative Interviews, Design Thinking, quantitative Umfrage, Literaturanalyse …"></textarea>
             </div>
-          </div>
 
-          <div class="form-row">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-betreuer">Betreuer:in *</label>
+                <input type="text" id="f-betreuer" required>
+              </div>
+              <div class="form-group">
+                <label for="f-kontakt">Kontakt (E-Mail) *</label>
+                <input type="email" id="f-kontakt" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-unternehmen">Unternehmen (bei Praxis / Projekt)</label>
+                <input type="text" id="f-unternehmen" placeholder="Nur bei Projektarbeit oder Praxissemester">
+              </div>
+              <div class="form-group">
+                <label for="f-ort">Ort / Arbeitsweise</label>
+                <input type="text" id="f-ort" placeholder="Campus / Hybrid / Extern">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-beginn">Beginn / Zeitraum</label>
+                <input type="text" id="f-beginn" placeholder="ab sofort / WS 2026/27">
+              </div>
+              <div class="form-group">
+                <label for="f-umfang">Umfang / Dauer</label>
+                <input type="text" id="f-umfang" placeholder="z. B. 12 Wochen / 12 ECTS">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-voraussetzungen">Voraussetzungen</label>
+                <textarea id="f-voraussetzungen" rows="2"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="f-keywords">Schlagworte (kommagetrennt)</label>
+                <input type="text" id="f-keywords" placeholder="UX, KI, Nachhaltigkeit">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-sprache">Sprache</label>
+                <select id="f-sprache">
+                  <option value="Deutsch">Deutsch</option>
+                  <option value="Englisch">Englisch</option>
+                  <option value="Deutsch/Englisch">Deutsch/Englisch</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="f-verguetung">Vergütung</label>
+                <input type="text" id="f-verguetung" placeholder="unbezahlt / Aufwandsentschädigung">
+              </div>
+            </div>
+
             <div class="form-group">
-              <label for="f-sprache">Sprache</label>
-              <select id="f-sprache">
-                <option value="Deutsch">Deutsch</option>
-                <option value="Englisch">Englisch</option>
-                <option value="Deutsch/Englisch">Deutsch/Englisch</option>
-              </select>
+              <label for="f-bewerbung">Bewerbungsform</label>
+              <input type="text" id="f-bewerbung" placeholder="Motivationsschreiben + CV an …">
             </div>
-            <div class="form-group">
-              <label for="f-verguetung">Vergütung</label>
-              <input type="text" id="f-verguetung" placeholder="unbezahlt / Aufwandsentschädigung">
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="btn-save-thesis">Thema speichern</button>
+              <button type="button" id="btn-cancel-edit" class="btn btn-text">Abbrechen</button>
             </div>
-          </div>
-
-          <div class="form-group">
-            <label for="f-bewerbung">Bewerbungsform</label>
-            <input type="text" id="f-bewerbung" placeholder="Motivationsschreiben + CV an …">
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Thema speichern & JSON herunterladen</button>
-            <button type="button" id="btn-export" class="btn btn-outline">Aktuelle Daten als JSON exportieren</button>
-          </div>
-        </form>
-
-        <hr>
-        <p class="hint">
-          Nach dem Speichern wird eine aktualisierte <code>theses.json</code> heruntergeladen.
-          Diese Datei einfach im Repository ersetzen und committen – dann ist das neue Thema live.
-        </p>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© Rheinische Hochschule Köln · Abschlussarbeiten-Portal von H. Becker und D. Pfennig  · Nur zur internen Nutzung</p>
+      <p>© Rheinische Hochschule Köln · Abschlussarbeiten-Portal · Nur zur internen Nutzung</p>
     </div>
   </footer>
 

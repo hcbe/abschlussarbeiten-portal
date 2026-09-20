@@ -5,7 +5,7 @@ let theses = [];
 let filtered = [];
 let editingId = null; // null = neues Thema, sonst ID des zu bearbeitenden Themas
 
-const ADMIN_PASSWORD = "rh-koeln-2026"; // Bitte später ändern!
+const ADMIN_PASSWORD = "tetik2.0"; // Bitte später ändern!
 const STORAGE_KEY = "rh-koeln-theses";
 
 // ---------- DOM Elements ----------

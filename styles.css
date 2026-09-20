@@ -645,3 +645,55 @@ hr {
     align-items: flex-start;
   }
 }
+
+/* ===== Info Lightbox ===== */
+.header-nav {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.info-content {
+  max-width: 680px;
+}
+
+.info-body h2 {
+  font-size: 1.35rem;
+  color: var(--rh-purple);
+  margin-bottom: 1.25rem;
+  padding-right: 2rem;
+}
+
+.info-section {
+  margin-bottom: 1.35rem;
+}
+
+.info-section h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--rh-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.45rem;
+}
+
+.info-section p,
+.info-section li {
+  font-size: 0.95rem;
+  color: var(--rh-dark);
+  line-height: 1.55;
+}
+
+.info-section ol,
+.info-section ul {
+  padding-left: 1.25rem;
+  margin: 0.35rem 0 0;
+}
+
+.info-section li {
+  margin-bottom: 0.35rem;
+}
+
+.info-section strong {
+  color: var(--rh-dark);
+}

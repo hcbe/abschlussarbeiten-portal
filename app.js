@@ -5,7 +5,7 @@ let theses = [];
 let filtered = [];
 let editingId = null; // null = neues Thema, sonst ID des zu bearbeitenden Themas
 
-const ADMIN_PASSWORD = "tetik2.0"; // Bitte später ändern!
+const ADMIN_PASSWORD = "rh-koeln-2026"; // Bitte später ändern!
 const STORAGE_KEY = "rh-koeln-theses";
 
 // ---------- DOM Elements ----------
@@ -15,6 +15,7 @@ const emptyEl = document.getElementById("empty-state");
 const detailModal = document.getElementById("detail-modal");
 const detailBody = document.getElementById("detail-body");
 const adminModal = document.getElementById("admin-modal");
+const infoModal = document.getElementById("info-modal");
 const adminLogin = document.getElementById("admin-login");
 const adminPanel = document.getElementById("admin-panel");
 const adminThesisList = document.getElementById("admin-thesis-list");
@@ -236,6 +237,7 @@ function showDetail(id) {
 function closeModals() {
   detailModal.classList.add("hidden");
   adminModal.classList.add("hidden");
+  if (infoModal) infoModal.classList.add("hidden");
   document.body.style.overflow = "";
 }
 
@@ -441,6 +443,12 @@ function bindEvents() {
   // Modal close
   document.querySelectorAll(".modal-close, .modal-backdrop").forEach(el => {
     el.addEventListener("click", closeModals);
+  });
+
+  // Info Lightbox
+  document.getElementById("btn-info").addEventListener("click", () => {
+    infoModal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
   });
 
   // Admin
